@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/disney-pinnacle-ar-web/static/css/main.41ecb457.css",
-    "main.js": "/disney-pinnacle-ar-web/static/js/main.13233781.js",
+    "main.js": "/disney-pinnacle-ar-web/static/js/main.d1fea3ce.js",
     "static/js/453.09ea5956.chunk.js": "/disney-pinnacle-ar-web/static/js/453.09ea5956.chunk.js",
     "index.html": "/disney-pinnacle-ar-web/index.html",
     "main.41ecb457.css.map": "/disney-pinnacle-ar-web/static/css/main.41ecb457.css.map",
-    "main.13233781.js.map": "/disney-pinnacle-ar-web/static/js/main.13233781.js.map",
+    "main.d1fea3ce.js.map": "/disney-pinnacle-ar-web/static/js/main.d1fea3ce.js.map",
     "453.09ea5956.chunk.js.map": "/disney-pinnacle-ar-web/static/js/453.09ea5956.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41ecb457.css",
-    "static/js/main.13233781.js"
+    "static/js/main.d1fea3ce.js"
   ]
 }
