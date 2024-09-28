@@ -1,24 +1,20 @@
 // src/QRScanner.js
-import React, { useState } from 'react';
+import React from 'react';
 import { useZxing } from 'react-zxing';
 
-export default function QRScanner({ onScan }) {
-  const [error, setError] = useState(null);
-
+function QRScanner({ onScan }) {
   const { ref } = useZxing({
     onResult(result) {
       onScan(result.getText());
-    },
-    onError(err) {
-      console.error(err);
-      setError(err);
     },
   });
 
   return (
     <div>
+      <h2>Inquadra il QR Code</h2>
       <video ref={ref} style={{ width: '100%' }} />
-      {error && <p>Errore nella scansione: {error.message}</p>}
     </div>
   );
 }
+
+export default QRScanner;
