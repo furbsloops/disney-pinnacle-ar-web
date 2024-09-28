@@ -1,33 +1,138 @@
 /* src/App.css */
 
+/* Definizione delle variabili per colori e font */
 :root {
-  --primary-color: #0aff9d; /* Colore neon */
-  --background-color: #121212; /* Sfondo scuro */
-  --text-color: #ffffff;
-  --font-family: 'Roboto', sans-serif;
+  --primary-color: #0ff; /* Colore ciano neon */
+  --secondary-color: #f0f; /* Colore magenta neon */
+  --background-color: #0a0a0a; /* Sfondo scuro */
+  --text-color: #ffffff; /* Colore testo bianco */
+  --font-family: 'Orbitron', sans-serif; /* Font futuristico */
 }
 
+/* Stili globali */
 body {
+  margin: 0;
+  padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-family);
-  margin: 0;
+  text-align: center;
 }
 
-h1, h2, h3 {
+/* Container principale */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Sezione QR Code */
+.qr-code {
+  margin-bottom: 20px;
+}
+
+.qr-code h2 {
+  font-size: 1.8rem;
   color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px var(--primary-color);
 }
 
+.qr-code div {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* Sezione Anteprima Fotocamera */
+.camera-preview {
+  margin-top: 20px;
+}
+
+.camera-preview h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px var(--secondary-color);
+}
+
+.camera-preview video,
+.camera-preview a-scene {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--secondary-color);
+}
+
+/* Bottoni e elementi interattivi */
 button {
   background-color: var(--primary-color);
   border: none;
   color: var(--background-color);
-  padding: 10px 20px;
-  cursor: pointer;
+  padding: 15px 30px;
   font-size: 1rem;
+  font-family: var(--font-family);
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--primary-color);
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  opacity: 0.8;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 20px var(--secondary-color);
 }
 
+/* Effetti su testo */
+h2, p, label {
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Stili per input */
+input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Stili per link */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+  .qr-code h2,
+  .camera-preview h2 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

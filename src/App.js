@@ -1,5 +1,6 @@
 // src/App.js
 import React, { useState } from 'react';
+import QRCodeGenerator from './QRCodeGenerator';
 import QRScanner from './QRScanner';
 import ARViewer from './ARViewer';
 import './App.css';
@@ -8,7 +9,6 @@ function App() {
   const [isQRCodeScanned, setIsQRCodeScanned] = useState(false);
 
   const handleQRCodeScanned = (data) => {
-    // Supponiamo che 'nft-access' sia il dato del QR code valido
     if (data === 'nft-access') {
       setIsQRCodeScanned(true);
     }
@@ -17,7 +17,16 @@ function App() {
   return (
     <div className="App">
       {!isQRCodeScanned ? (
-        <QRScanner onScan={handleQRCodeScanned} />
+        <div className="container">
+          <div className="qr-code">
+            <h2>Scansiona questo QR Code con il tuo dispositivo</h2>
+            <QRCodeGenerator />
+          </div>
+          <div className="camera-preview">
+            <h2>Inquadra il QR Code</h2>
+            <QRScanner onScan={handleQRCodeScanned} />
+          </div>
+        </div>
       ) : (
         <ARViewer />
       )}

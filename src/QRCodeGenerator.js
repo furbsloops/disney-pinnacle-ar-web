@@ -2,10 +2,14 @@
 import React from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
 
-export default function QRCodeGenerator({ data }) {
+function QRCodeGenerator() {
+  const qrValue = 'nft-access'; // The value to encode in the QR code
+
   return (
     <div>
-      <QRCodeCanvas value={data} size={256} />
+      <QRCodeCanvas value={qrValue} size={256} />
     </div>
   );
 }
+
+export default QRCodeGenerator;
