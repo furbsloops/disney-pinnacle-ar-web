@@ -1,11 +1,12 @@
 // src/ModelViewer.js
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 function Model() {
-  const gltf = useGLTF('/models/model.glb', true); // Aggiorna il percorso qui
-  return <primitive object={gltf.scene} dispose={null} />;
+  const modelPath = `${process.env.PUBLIC_URL}/models/model.glb`;
+  const { scene } = useGLTF(modelPath);
+  return <primitive object={scene} dispose={null} />;
 }
 
 export default function ModelViewer() {
@@ -13,7 +14,9 @@ export default function ModelViewer() {
     <Canvas style={{ height: '500px' }}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <Model />
+      <Suspense fallback={null}>
+        <Model />
+      </Suspense>
       <OrbitControls />
     </Canvas>
   );
