@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/disney-pinnacle-ar-web/static/css/main.614b6e9a.css",
-    "main.js": "/disney-pinnacle-ar-web/static/js/main.49f02ef2.js",
+    "main.css": "/disney-pinnacle-ar-web/static/css/main.16c412b0.css",
+    "main.js": "/disney-pinnacle-ar-web/static/js/main.438bc6cd.js",
     "static/js/453.09ea5956.chunk.js": "/disney-pinnacle-ar-web/static/js/453.09ea5956.chunk.js",
     "index.html": "/disney-pinnacle-ar-web/index.html",
-    "main.614b6e9a.css.map": "/disney-pinnacle-ar-web/static/css/main.614b6e9a.css.map",
-    "main.49f02ef2.js.map": "/disney-pinnacle-ar-web/static/js/main.49f02ef2.js.map",
+    "main.16c412b0.css.map": "/disney-pinnacle-ar-web/static/css/main.16c412b0.css.map",
+    "main.438bc6cd.js.map": "/disney-pinnacle-ar-web/static/js/main.438bc6cd.js.map",
     "453.09ea5956.chunk.js.map": "/disney-pinnacle-ar-web/static/js/453.09ea5956.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.614b6e9a.css",
-    "static/js/main.49f02ef2.js"
+    "static/css/main.16c412b0.css",
+    "static/js/main.438bc6cd.js"
   ]
 }
